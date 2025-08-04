@@ -10,7 +10,7 @@ This project represents the culmination of video stream handler in C++ using GSt
 
 # File Structure
 
-'''
+```
 cpp-streaming-app/
 ├── CMakeLists.txt         # Build config
 ├── README.md              # Project overview
@@ -25,7 +25,7 @@ cpp-streaming-app/
 ├── data/                  # Sample input (e.g., video files)
 ├── scripts/               # Bash/Python utilities
 └── docker/                # Optional Dockerfiles
-'''
+```
 
 # Example Usage/Screenshots
 
