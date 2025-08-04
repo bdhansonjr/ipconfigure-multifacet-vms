@@ -1,5 +1,7 @@
 Brian Hanson, Jr.
+
 IPConfigure Technical Showcase
+
 August 3, 2025
 
 # Project Overview
