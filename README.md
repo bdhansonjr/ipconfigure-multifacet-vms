@@ -15,6 +15,9 @@ cpp-streaming-app/
 ├── CMakeLists.txt         # Build config
 ├── README.md              # Project overview
 ├── .gitignore             # Ignore build files
+├── .github/               # GitHub Actions CI/CD configuration
+│   └── workflows/
+│       └── build.yml/     # Build workflow script
 ├── src/                   # Source code
 │   ├── main.cpp
 │   └── stream_handler.cpp
