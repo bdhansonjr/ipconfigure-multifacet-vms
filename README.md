@@ -7,8 +7,8 @@ This project represents the culmination of video stream handler in C++ using GSt
 
 # Build Instructions
 
-
 # File Structure
+
 cpp-streaming-app/
 ├── CMakeLists.txt         # Build config
 ├── README.md              # Project overview
