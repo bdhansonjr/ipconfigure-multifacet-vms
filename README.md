@@ -7,6 +7,17 @@ This project represents the culmination of video stream handler in C++ using GSt
 
 # Build Instructions
 
+6/
+├── server.js               # Main server file
+├── fingerprints.log        # Log file for fingerprints
+├── html/                   # Directory containing HTML pages
+│   ├── page-1.html
+│   ├── page-2.html
+│   ├── page-3.html
+|   |── page-4.html
+│   ├── ...
+└── README.md               # This file
+
 # File Structure
 
 cpp-streaming-app/
