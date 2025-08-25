@@ -8,25 +8,29 @@ project(StreamApp VERSION 1.0)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
-# Include header files from include/
-include_directories(include)
+# Dependencies: GStreamer (core, app) and OpenCV
+find_package(PkgConfig REQUIRED)
+pkg_check_modules(GST REQUIRED gstreamer-1.0 gstreamer-app-1.0)
 
-# Add the main executable
-add_executable(cpp-streaming-app
-    src/main.cpp
+find_package(OpenCV REQUIRED)
+
+# Includes
+include_directories(
+    include
+    ${GST_INCLUDE_DIRS}
+    ${OpenCV_INCLUDE_DIRS}
 )
 
-# Add test executable (if Google Test is available)
-enable_testing()
-
-# Optional: Add unit tests (if present)
-add_executable(runTests
-    tests/test_main.cpp
+link_directories(
+    ${GST_LIBRARY_DIRS}
 )
 
-# Link Google Test
-find_package(GTest REQUIRED)
-target_link_libraries(runTests GTest::gtest GTest::gtest_main pthread)
+add_compile_options(${GST_CFLAGS_OTHER})
 
-# Register test suite
-add_test(NAME AllTests COMMAND runTests)
+# Main executable
+add_executable(cpp-streaming-app src/main.cpp)
+
+target_link_libraries(cpp-streaming-app
+    ${GST_LIBRARIES}
+    ${OpenCV_LIBS}
+)
