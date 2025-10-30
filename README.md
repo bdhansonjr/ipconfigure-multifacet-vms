@@ -2,7 +2,7 @@ Brian Hanson, Jr.
 
 IPConfigure Technical Showcase
 
-August 3, 2025
+October 30, 2025
 
 # Project Overview
 This project represents the culmination of video stream handler in C++ using GStreamer integrated with REST APIs, Motion Detection using OpenCV that can be visualized in a VMS Dashboard.
